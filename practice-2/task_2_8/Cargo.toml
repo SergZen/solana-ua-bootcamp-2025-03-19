@@ -1,0 +1,41 @@
+[package]
+name = "task_2_8"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "solana_utils"
+path = "src/lib.rs"
+
+[[bin]]
+name = "send-sol"
+path = "src/bin/send-sol.rs"
+
+[[bin]]
+name = "create-token-mint"
+path = "src/bin/create-token-mint.rs"
+
+[[bin]]
+name = "create-token-account"
+path = "src/bin/create-token-account.rs"
+
+[[bin]]
+name = "mint-tokens"
+path = "src/bin/mint-tokens.rs"
+
+[[bin]]
+name = "create-token-metadata"
+path = "src/bin/create-token-metadata.rs"
+
+[dependencies]
+dotenv = "0.15.0"
+anyhow = "1.0.97"
+
+solana-client = "2.2.1"
+solana-sdk = "2.2.1"
+spl-token-2022 = "7.0.0"
+spl-memo = "6.0.0"
+spl-associated-token-account= "6.0.0"
+mpl-token-metadata = "5.1.0"
+tokio = { version = "1.0.0", features = ["rt", "rt-multi-thread", "macros"] }
+
