@@ -1,0 +1,6 @@
+[workspace]
+resolver = "1"
+members = [
+    "practice-1/rust-exercises",
+    "practice-2/task*",
+]
