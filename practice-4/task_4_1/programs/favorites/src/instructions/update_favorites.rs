@@ -1,13 +1,17 @@
 use anchor_lang::prelude::*;
 
-use crate::Favorites;
+use crate::{Favorites, SEED};
 
 #[derive(Accounts)]
 pub struct UpdateFavorites<'info> {
     #[account(mut)]
     pub user: Signer<'info>,
 
-    #[account(mut)]
+    #[account(
+        mut,
+        seeds = [SEED, user.key().as_ref()],
+        bump,
+    )]
     pub favorites: Account<'info, Favorites>,
 
     pub system_program: Program<'info, System>

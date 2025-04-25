@@ -84,7 +84,6 @@ describe("favorites", () => {
                 .updateFavorites(updateFavoriteNumber, updateFavoriteColor)
                 .accounts({
                     user: user.publicKey,
-                    favorites: favoritesPda,
                 })
                 .signers([user])
                 .rpc();
@@ -128,7 +127,6 @@ describe("favorites", () => {
                 .updateFavorites(updateFavoriteNumber, updateFavoriteColor)
                 .accounts({
                     user: user.publicKey,
-                    favorites: favoritesPda
                 })
                 .signers([user])
                 .rpc();
@@ -172,7 +170,6 @@ describe("favorites", () => {
                 .updateFavorites(updateFavoriteNumber, updateFavoriteColor)
                 .accounts({
                     user: user.publicKey,
-                    favorites: favoritesPda,
                 })
                 .signers([user])
                 .rpc();
